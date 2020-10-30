@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form action="" id="form">
+            <div class="container">
+                <div class="form-title">
+                    <h2>Sign up</h2>
+                </div>
+                <div class="top-row">
+                    <div class="field col">
+                        <label for="">First Name<span>*</span></label>
+                        <input type="text" id='name1' name='fName' placeholder="First Name" required>
+                        <small>Error message</small>
+                    </div>
+                    <div class="field col">
+                        <label for="">Last Name<span>*</span></label>
+                        <input type="text" id='name2' name='lName' placeholder="Last Name" required>
+                        <small>Error message</small>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="">Email<span>*</span></label>
+                    <input type="email" id='mail' name='email' placeholder="Email">
+                    <small>Error message</small>
+                </div>
+                <div class="field">
+                    <label for="">Password<span>*</span></label>
+                    <input type="password" id="pwd1" name='psd' placeholder="Password">
+                    <small>Error message</small>
+                </div>
+                <div class="field">
+                    <label for="">Confirm Password<span >*</span></label>
+                    <input type="password" id="pwd2" name='psd' placeholder="Confirm password">
+                    <small>Error message</small>
+                </div>
+                <div class="field">
+                    <label>
+                    <input type="checkbox" name='box'> I accept the <a href="">Term of use</a>
+                </label>
+                </div>
+                <button>Sign Up</button>
+        </form>
+        <p>Already have an account <a href="login.html">login Here</a></p>
+        </div>
+        <!-- <p>Already have an account<a href="login.html">Login Here</a></p> -->
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

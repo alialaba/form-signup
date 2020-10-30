@@ -1,0 +1,133 @@
+::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F1E8E6;
+}
+
+.field.error input {
+    border-color: red;
+}
+
+.field.error small {
+    visibility: visible;
+    color: red;
+}
+
+.field.success input {
+    border-color: green;
+}
+
+.field.success small {
+    visibility: hidden;
+    color: green;
+}
+
+.field small {
+    visibility: hidden;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.field {
+    padding-bottom: 6px;
+}
+
+.form {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 10px 10px 20px #00000029;
+    opacity: 1;
+    max-width: 100%;
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px 40px 20px 20px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login {
+    padding-top: 3em;
+    max-height: 50vh;
+    margin-top: 4em;
+}
+
+.container {
+    padding: 16px;
+}
+
+h2 {
+    color: #fe9c8f;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.col:nth-child(1) {
+    width: 50%;
+}
+
+.col:nth-child(2) {
+    width: 50%;
+}
+
+.top-row {
+    display: flex;
+}
+
+.col+.col {
+    margin-left: 3em;
+}
+
+input[type=checkbox] {
+    margin: 10px 0 12px 0;
+}
+
+input[type=text],
+[type=password],
+[type=email] {
+    width: 100%;
+    line-height: 1.5;
+    padding: 10px 10px;
+    margin: 10px 0 3px 0;
+    border: .1px solid #fe9c8f;
+    border-radius: 7px;
+    font-size: .9rem;
+}
+
+
+/* label {
+    display: inline-block;
+    margin-top: 8px;
+} */
+
+input:hover,
+input:focus {
+    outline: none;
+    border: .7px solid #fad9c1;
+}
+
+span {
+    color: #fe9c8f;
+    position: relative;
+    top: 3px;
+}
+
+button {
+    background: #fe9c8f;
+    border: none;
+    padding: .9em 2.5em;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 7px;
+}
+
+button:focus,
+button:hover {
+    outline: none;
+}
