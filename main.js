@@ -4,28 +4,35 @@ const name2 = document.getElementById('name2');
 const email = document.getElementById('mail');
 const password = document.getElementById('pwd1');
 const password2 = document.getElementById('pwd2');
+const checkBox = document.getElementById('check')
 
 // sign in
 const formLogin = document.getElementById('form2')
 const emailLogin = document.getElementById('mail2')
 const passLogin = document.getElementById('pwd3')
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (form !== null) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    checkInputs()
-})
+        checkInputs()
+    })
 
-// formLogin.addEventListener('submit', (e) => {
-//     e.preventDefault();
+} else {
+    formLogin.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-//     checkLoginInputs()
-// })
+        checkLoginInputs()
+    })
+}
+
+
+
 
 
 function checkLoginInputs() {
     let emailLoginValue = emailLogin.value.trim();
-    let passLoginValue = emailLogin.value.trim();
+    let passLoginValue = passLogin.value.trim();
 
     if (emailLoginValue === '') {
         setErrorFor(emailLogin, 'Email cannot be blank')
@@ -38,6 +45,10 @@ function checkLoginInputs() {
         setErrorFor(passLogin, 'Incorrect password');
     } else {
         setSuccess(passLogin)
+        setTimeout(() => {
+            alert('Login Succssfully');
+            location.reload();
+        }, 1000);
     }
 
 }
@@ -48,6 +59,13 @@ function checkInputs() {
     let emailValue = email.value.trim();
     let passwordValue = password.value.trim();
     let password2Value = password2.value.trim();
+    let checkBoxValue = checkBox.checked;
+
+    if (checkBoxValue === false) {
+        setErrorFor(check, 'You have to agree');
+    } else {
+        setSuccess(check)
+    }
 
     if (emailValue === "") {
         setErrorFor(email, 'Email cannot be blank');
