@@ -61,11 +61,6 @@ function checkInputs() {
     let password2Value = password2.value.trim();
     let checkBoxValue = checkBox.checked;
 
-    if (checkBoxValue === false) {
-        setErrorFor(check, 'You have to agree');
-    } else {
-        setSuccess(check)
-    }
 
     if (emailValue === "") {
         setErrorFor(email, 'Email cannot be blank');
@@ -88,12 +83,16 @@ function checkInputs() {
         setErrorFor(password2, 'Password does not match');
     } else {
         setSuccess(password2)
+    }
+    if (checkBoxValue === false) {
+        setErrorFor(check, 'You have to agree');
+    } else {
+        setSuccess(check)
         setTimeout(function() {
             alert('Sign Up successfully')
             location.reload();
-        }, 2000)
+        }, 1000)
     }
-
 }
 
 
